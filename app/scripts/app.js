@@ -13,12 +13,10 @@ angular
     'ui.router'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
-    $locationProvider.html5Mode({
-        enabled: true
-    });
+    $locationProvider.html5Mode(true);
 
     $urlRouterProvider
-        .otherwise('/');
+        .otherwise('');
 
     $stateProvider
         .state('main', {
