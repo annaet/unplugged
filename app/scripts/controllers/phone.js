@@ -34,7 +34,9 @@ angular.module('phoneApp')
       url: 'http://anna-nr.mybluemix.net/mark'
     }).then(function successCallback(response) {
       console.log(response.data);
-      $scope.contacts[5].driving = response.data;
+      $scope.contacts[5].driving = response.data.driving;
+      console.log(response.data.eta - Date.now());
+      $scope.contacts[5].eta = response.data.eta - Date.now();
     }, function errorCallback(response) {
       console.log(response);
     });
