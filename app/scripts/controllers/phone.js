@@ -8,7 +8,7 @@
  * Controller of the phoneApp
  */
 angular.module('phoneApp')
-  .controller('PhoneCtrl', function ($scope, $http) {
+  .controller('PhoneCtrl', function ($scope, $http, $interval) {
     $scope.contacts = [{
       name: 'Andy',
       driving: false
@@ -29,15 +29,16 @@ angular.module('phoneApp')
       driving: false
     }];
 
-    $http({
-      method: 'GET',
-      url: 'http://anna-nr.mybluemix.net/mark'
-    }).then(function successCallback(response) {
-      console.log(response.data);
-      $scope.contacts[5].driving = response.data.driving;
-      console.log(response.data.eta - Date.now());
-      $scope.contacts[5].eta = response.data.eta - Date.now();
-    }, function errorCallback(response) {
-      console.log(response);
-    });
+    $interval(function () {
+      $http({
+        method: 'GET',
+        url: 'http://anna-nr.mybluemix.net/mark'
+      }).then(function successCallback(response) {
+        $scope.contacts[5].driving = response.data.driving;
+        $scope.contacts[5].eta = response.data.eta - Date.now();
+      }, function errorCallback(response) {
+        console.log(response);
+      });
+    }, 1000);
+
   });
