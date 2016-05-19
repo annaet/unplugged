@@ -15,6 +15,8 @@ angular.module('phoneApp')
         $scope.ID = jobs[i].ID;
         $scope.Name = jobs[i].Name;
         $scope.Address = jobs[i].Address;
+        $scope.Postcode = jobs[i].Postcode;
+        $scope.Appliance = jobs[i].Appliance;
         $scope.Type = jobs[i].Type;
       }
     }

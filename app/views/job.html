@@ -1,4 +1,7 @@
-<h2>Job No. {{ID}}: {{Type}}</h2>
+<h2>Job No. {{ID}}</h2>
+<h3>Job Type: {{Type}}</h3>
 
 Name: {{Name}} <br/>
-Address: {{Address}}
+Address: {{Address}} <br/>
+Postcode: <span ui-sref="gps({addr: Postcode})">{{Postcode}}</span> <br/>
+Appliance: {{Appliance}}
