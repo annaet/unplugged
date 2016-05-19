@@ -10,7 +10,8 @@
  */
 angular
   .module('phoneApp', [
-    'ui.router'
+    'ui.router',
+    'ui.bootstrap'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
     $locationProvider.html5Mode(true);

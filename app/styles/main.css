@@ -93,3 +93,12 @@ body {
 .status-icon {
   width: 20px;
 }
+
+.contact-header {
+  border-bottom: 1px solid black;
+}
+
+.phone-icon {
+  width: 35px;
+  float: right;
+}

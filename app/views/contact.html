@@ -1,3 +1,10 @@
-<p>This is the contact view.</p>
+<h1 class="contact-header">
+  <img class="status-icon" ng-if="!mark.driving" src="images/tick.png">
+  <img class="status-icon" ng-if="mark.driving" src="images/driving.png">
+  {{contact}}
+  <img class="phone-icon" src="images/phone.png" ng-click="call()">
+</h1>
 
-{{contact}}
+<ul>
+  <li ng-repeat="msg in mark.messages">{{msg}}</li>
+</ul>
