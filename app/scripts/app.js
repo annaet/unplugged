@@ -38,5 +38,10 @@ angular
             url: '/contact/:contactid',
             templateUrl: 'views/contact.html',
             controller: 'ContactCtrl'
+        })
+        .state('job', {
+            url: '/job/:jobid',
+            templateUrl: 'views/job.html',
+            controller: 'JobCtrl'
         });
   });

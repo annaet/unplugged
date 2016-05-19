@@ -9,6 +9,7 @@
  */
 angular.module('phoneApp')
   .controller('FieldAppCtrl', function ($scope) {
-    $scope.jobs = ['1', '2', '3'];
+    $scope.jobs = ['1: Service for Mrs Smith', '2: Breakdown for Mr Jones', '3: Service for Mr Bloggs'];
 
+    
   });
