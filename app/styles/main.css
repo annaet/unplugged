@@ -102,3 +102,8 @@ body {
   width: 35px;
   float: right;
 }
+
+.angular-google-map-container {
+  height: 600px;
+  margin: -10px -20px 0 -20px;
+}

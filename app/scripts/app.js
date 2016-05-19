@@ -11,7 +11,8 @@
 angular
   .module('phoneApp', [
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'uiGmapgoogle-maps'
   ])
   .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -44,5 +45,10 @@ angular
             url: '/job/:jobid',
             templateUrl: 'views/job.html',
             controller: 'JobCtrl'
+        })
+        .state('gps', {
+            url: '/gps',
+            templateUrl: 'views/gps.html',
+            controller: 'GpsCtrl'
         });
   });
