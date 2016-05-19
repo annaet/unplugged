@@ -25,7 +25,6 @@ angular.module('phoneApp')
       console.log(response);
     });
 
-
     $scope.call = function() {
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,

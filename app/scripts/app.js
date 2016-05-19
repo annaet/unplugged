@@ -47,7 +47,7 @@ angular
             controller: 'JobCtrl'
         })
         .state('gps', {
-            url: '/gps',
+            url: '/gps/:addr',
             templateUrl: 'views/gps.html',
             controller: 'GpsCtrl'
         });
