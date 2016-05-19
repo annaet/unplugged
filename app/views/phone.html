@@ -1,5 +1,9 @@
 <h1>Contacts</h1>
 
-<ul>
-  <li ng-repeat="contact in contacts" ui-sref="contact({contactid: contact})">{{contact}}</li>
+<ul class="no-bullets">
+  <li ng-repeat="contact in contacts" ui-sref="contact({contactid: contact.name})">
+    <img class="status-icon" ng-if="!contact.driving" src="images/tick.png">
+    <img class="status-icon" ng-if="contact.driving" src="images/driving.png">
+    {{contact.name}}
+  </li>
 </ul>
