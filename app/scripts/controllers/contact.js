@@ -10,9 +10,4 @@
 angular.module('phoneApp')
   .controller('ContactCtrl', function ($scope, $stateParams) {
     $scope.contact = $stateParams.contactid;
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });
