@@ -2,15 +2,14 @@
 
 /**
  * @ngdoc function
- * @name phoneApp.controller:PhoneCtrl
+ * @name phoneApp.controller:ContactCtrl
  * @description
- * # PhoneCtrl
+ * # ContactCtrl
  * Controller of the phoneApp
  */
 angular.module('phoneApp')
-  .controller('PhoneCtrl', function ($scope) {
-    $scope.contacts = ['Andy', 'Ben', 'Carol', 'Dave', 'Erin'];
-
+  .controller('ContactCtrl', function ($scope, $stateParams) {
+    $scope.contact = $stateParams.contactid;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

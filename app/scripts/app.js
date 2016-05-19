@@ -10,31 +10,35 @@
  */
 angular
   .module('phoneApp', [
-    'ngRoute'
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/phone', {
-        templateUrl: 'views/phone.html',
-        controller: 'PhoneCtrl',
-        controllerAs: 'phone'
-      })
-      .when('/field-app', {
-        templateUrl: 'views/field-app.html',
-        controller: 'FieldAppCtrl',
-        controllerAs: 'fieldApp'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($urlRouterProvider, $stateProvider, $locationProvider) {
+    $locationProvider.html5Mode({
+        enabled: true
+    });
+
+    $urlRouterProvider
+        .otherwise('/');
+
+    $stateProvider
+        .state('main', {
+            url: '/',
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl'
+        })
+        .state('phone', {
+            url: '/phone',
+            templateUrl: 'views/phone.html',
+            controller: 'PhoneCtrl'
+        })
+        .state('field-app', {
+            url: '/field-app',
+            templateUrl: 'views/field-app.html',
+            controller: 'FieldAppCtrl'
+        })
+        .state('contact', {
+            url: '/contact/:contactid',
+            templateUrl: 'views/contact.html',
+            controller: 'ContactCtrl'
+        });
   });

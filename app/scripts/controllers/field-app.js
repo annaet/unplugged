@@ -8,10 +8,7 @@
  * Controller of the phoneApp
  */
 angular.module('phoneApp')
-  .controller('FieldAppCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('FieldAppCtrl', function ($scope) {
+    $scope.jobs = ['1', '2', '3'];
+
   });
